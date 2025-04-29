@@ -56,7 +56,7 @@ jobs:
       # Benchmarks ...
 
       - name: 🏃🏻‍♀️ Benchmarks
-        run: cargo bench -p rosenpass --bench trace_handshake --verbose $RUST_TARGET_FLAG >bench.json
+        run: cargo bench -p rosenpass --bench trace_handshake -F trace_bench --verbose $RUST_TARGET_FLAG >bench.json
 
       - name: Upload benchmarks
         uses: cryspen/benchmark-upload-and-plot-action@v2
