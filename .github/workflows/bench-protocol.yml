@@ -14,7 +14,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  benchmark:
+  proto-benchmark:
     strategy:
       fail-fast: true
       matrix:
@@ -72,7 +72,7 @@ jobs:
 
   ciphers-protocol-bench-status:
     if: ${{ always() }}
-    needs: [benchmark]
+    needs: [proto-benchmark]
     runs-on: ubuntu-latest
     steps:
       - name: Successful
