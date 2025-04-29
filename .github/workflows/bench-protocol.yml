@@ -63,8 +63,8 @@ jobs:
         with:
           name: rosenpass protocol benchmarks
           group-by: 'os'
-          input-data-path: ciphers/bench.json
-          benchmark-data-dir-path: dev/bench/ciphers-protocol
+          input-data-path: bench.json
+          benchmark-data-dir-path: dev/bench/protocol
           github-token: ${{ secrets.GITHUB_TOKEN }}
           # NOTE: pushes to current repository
           gh-repository: github.com/${{ github.repository }}
