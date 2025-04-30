@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1746017071705,
+  "lastUpdate": 1746017095248,
   "repoUrl": "https://github.com/cryspen/rosenpass",
   "entries": {
     "rosenpass protocol benchmarks": [
@@ -1785,6 +1785,654 @@ window.BENCHMARK_DATA = {
             "name": "rhi6",
             "unit": "ns/iter",
             "value": "8787",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "clara@cryspen.com",
+            "name": "wysiwys",
+            "username": "wysiwys"
+          },
+          "committer": {
+            "email": "clara@cryspen.com",
+            "name": "wysiwys",
+            "username": "wysiwys"
+          },
+          "distinct": true,
+          "id": "a35faae3e44f211f3a58b7205ec31a68d9988460",
+          "message": "update workflow with new action syntax",
+          "timestamp": "2025-04-30T14:41:58+02:00",
+          "tree_id": "a9155703fb048170975420eb3a64179803904170",
+          "url": "https://github.com/cryspen/rosenpass/commit/a35faae3e44f211f3a58b7205ec31a68d9988460"
+        },
+        "date": 1746017094446,
+        "bigger_is_better": false,
+        "benches": [
+          {
+            "name": "handle_init_hello",
+            "unit": "ns/iter",
+            "value": "3321869",
+            "range": "± 152520",
+            "category": "proto_run_V02",
+            "sampleSize": "2"
+          },
+          {
+            "name": "ihr7",
+            "unit": "ns/iter",
+            "value": "544176",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihr5",
+            "unit": "ns/iter",
+            "value": "1134038",
+            "range": "± 513319",
+            "category": "proto_run_V02",
+            "sampleSize": "2"
+          },
+          {
+            "name": "ihi4",
+            "unit": "ns/iter",
+            "value": "9227",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihi2",
+            "unit": "ns/iter",
+            "value": "250",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhr6",
+            "unit": "ns/iter",
+            "value": "1135240",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "icr7",
+            "unit": "ns/iter",
+            "value": "6833",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihi3",
+            "unit": "ns/iter",
+            "value": "19446",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "icr4",
+            "unit": "ns/iter",
+            "value": "8476",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihi1",
+            "unit": "ns/iter",
+            "value": "650164",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ici4",
+            "unit": "ns/iter",
+            "value": "8225",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "handle_initiation",
+            "unit": "ns/iter",
+            "value": "2538502",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihi8",
+            "unit": "ns/iter",
+            "value": "8345",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhr4",
+            "unit": "ns/iter",
+            "value": "30507",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhi5",
+            "unit": "ns/iter",
+            "value": "627382",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ici7",
+            "unit": "ns/iter",
+            "value": "6813",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihi5",
+            "unit": "ns/iter",
+            "value": "620880",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ici3",
+            "unit": "ns/iter",
+            "value": "7655",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "icr6",
+            "unit": "ns/iter",
+            "value": "40",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihr4",
+            "unit": "ns/iter",
+            "value": "9948",
+            "range": "± 1332",
+            "category": "proto_run_V02",
+            "sampleSize": "2"
+          },
+          {
+            "name": "handle_resp_hello",
+            "unit": "ns/iter",
+            "value": "695930",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhi3",
+            "unit": "ns/iter",
+            "value": "7865",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "handle_resp_conf",
+            "unit": "ns/iter",
+            "value": "521885",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhr3",
+            "unit": "ns/iter",
+            "value": "7675",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhr7",
+            "unit": "ns/iter",
+            "value": "8536",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhr1",
+            "unit": "ns/iter",
+            "value": "250",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhr5",
+            "unit": "ns/iter",
+            "value": "566809",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihr8",
+            "unit": "ns/iter",
+            "value": "8336",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhi7",
+            "unit": "ns/iter",
+            "value": "8436",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "icr3",
+            "unit": "ns/iter",
+            "value": "8025",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhi6",
+            "unit": "ns/iter",
+            "value": "3837",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "handle_init_conf",
+            "unit": "ns/iter",
+            "value": "1129635",
+            "range": "± 362051",
+            "category": "proto_run_V02",
+            "sampleSize": "2"
+          },
+          {
+            "name": "ihr6",
+            "unit": "ns/iter",
+            "value": "8490",
+            "range": "± 285",
+            "category": "proto_run_V02",
+            "sampleSize": "2"
+          },
+          {
+            "name": "rhi4",
+            "unit": "ns/iter",
+            "value": "24516",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "icr1",
+            "unit": "ns/iter",
+            "value": "1085467",
+            "range": "± 406108",
+            "category": "proto_run_V02",
+            "sampleSize": "2"
+          },
+          {
+            "name": "ihr1",
+            "unit": "ns/iter",
+            "value": "1016423",
+            "range": "± 485581",
+            "category": "proto_run_V02",
+            "sampleSize": "2"
+          },
+          {
+            "name": "ihi7",
+            "unit": "ns/iter",
+            "value": "522305",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "icr2",
+            "unit": "ns/iter",
+            "value": "62978",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihi6",
+            "unit": "ns/iter",
+            "value": "548485",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihr4",
+            "unit": "ns/iter",
+            "value": "11111",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihr7",
+            "unit": "ns/iter",
+            "value": "1495313",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "handle_resp_hello",
+            "unit": "ns/iter",
+            "value": "1669768",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhi7",
+            "unit": "ns/iter",
+            "value": "9147",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihr8",
+            "unit": "ns/iter",
+            "value": "9077",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihr1",
+            "unit": "ns/iter",
+            "value": "1507656",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "icr6",
+            "unit": "ns/iter",
+            "value": "41",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhr3",
+            "unit": "ns/iter",
+            "value": "8586",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ici7",
+            "unit": "ns/iter",
+            "value": "7614",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihi7",
+            "unit": "ns/iter",
+            "value": "1481707",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihi2",
+            "unit": "ns/iter",
+            "value": "270",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhi5",
+            "unit": "ns/iter",
+            "value": "1591563",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhi4",
+            "unit": "ns/iter",
+            "value": "29455",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhi6",
+            "unit": "ns/iter",
+            "value": "4799",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "icr1",
+            "unit": "ns/iter",
+            "value": "1642899",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "icr4",
+            "unit": "ns/iter",
+            "value": "9127",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihi5",
+            "unit": "ns/iter",
+            "value": "1565544",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihi1",
+            "unit": "ns/iter",
+            "value": "1598545",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihi6",
+            "unit": "ns/iter",
+            "value": "1497316",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "handle_init_conf",
+            "unit": "ns/iter",
+            "value": "1726425",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhi3",
+            "unit": "ns/iter",
+            "value": "8577",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihi4",
+            "unit": "ns/iter",
+            "value": "11491",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "icr2",
+            "unit": "ns/iter",
+            "value": "56145",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihi8",
+            "unit": "ns/iter",
+            "value": "9047",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihi3",
+            "unit": "ns/iter",
+            "value": "21070",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ici3",
+            "unit": "ns/iter",
+            "value": "8556",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhr7",
+            "unit": "ns/iter",
+            "value": "9127",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "icr7",
+            "unit": "ns/iter",
+            "value": "7644",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ici4",
+            "unit": "ns/iter",
+            "value": "8997",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "handle_init_hello",
+            "unit": "ns/iter",
+            "value": "9233666",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhr5",
+            "unit": "ns/iter",
+            "value": "1512175",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihr5",
+            "unit": "ns/iter",
+            "value": "1669428",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhr6",
+            "unit": "ns/iter",
+            "value": "2958726",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "icr3",
+            "unit": "ns/iter",
+            "value": "8606",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "handle_resp_conf",
+            "unit": "ns/iter",
+            "value": "1490864",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "handle_initiation",
+            "unit": "ns/iter",
+            "value": "6277034",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhr4",
+            "unit": "ns/iter",
+            "value": "41047",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "rhr1",
+            "unit": "ns/iter",
+            "value": "230",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1"
+          },
+          {
+            "name": "ihr6",
+            "unit": "ns/iter",
+            "value": "9999",
             "range": "± 1",
             "category": "proto_run_V03",
             "sampleSize": "1"
