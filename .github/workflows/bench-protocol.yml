@@ -62,8 +62,8 @@ jobs:
         uses: cryspen/benchmark-upload-and-plot-action@v2
         with:
           name: rosenpass protocol benchmarks
-          group-by: 'os,arch,category'
-          schema: 'os,arch,category,name'
+          group-by: 'os,arch,category,group'
+          schema: 'os,arch,category,group,name'
           input-data-path: bench.json
           benchmark-data-dir-path: dev/bench/protocol
           github-token: ${{ secrets.GITHUB_TOKEN }}
