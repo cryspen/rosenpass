@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1746017548002,
+  "lastUpdate": 1746017890955,
   "repoUrl": "https://github.com/cryspen/rosenpass",
   "entries": {
     "rosenpass-ciphers primitives benchmarks": [
@@ -1602,6 +1602,327 @@ window.BENCHMARK_DATA = {
             "range": "± 248",
             "unit": "ns/iter",
             "os": "ubuntu-latest_64",
+            "category": "oqs kem",
+            "name": "decaps",
+            "api": "classicmceliece460896"
+          }
+        ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "clara@cryspen.com",
+            "name": "wysiwys",
+            "username": "wysiwys"
+          },
+          "committer": {
+            "email": "clara@cryspen.com",
+            "name": "wysiwys",
+            "username": "wysiwys"
+          },
+          "distinct": true,
+          "id": "a35faae3e44f211f3a58b7205ec31a68d9988460",
+          "message": "update workflow with new action syntax",
+          "timestamp": "2025-04-30T14:41:58+02:00",
+          "tree_id": "a9155703fb048170975420eb3a64179803904170",
+          "url": "https://github.com/cryspen/rosenpass/commit/a35faae3e44f211f3a58b7205ec31a68d9988460"
+        },
+        "date": 1746017890345,
+        "bigger_is_better": false,
+        "benches": [
+          {
+            "value": 626,
+            "range": "± 16",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "rustcrypto keyedhash",
+            "name": "hash_32byte",
+            "api": "blake2b"
+          },
+          {
+            "value": 631,
+            "range": "± 5",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "rustcrypto keyedhash",
+            "name": "hash_64byte",
+            "api": "blake2b"
+          },
+          {
+            "value": 625,
+            "range": "± 1",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "rustcrypto keyedhash",
+            "name": "hash_128byte",
+            "api": "blake2b"
+          },
+          {
+            "value": 2536,
+            "range": "± 6",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "rustcrypto keyedhash",
+            "name": "hash_1024byte",
+            "api": "blake2b"
+          },
+          {
+            "value": 1025,
+            "range": "± 5",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "libcrux keyedhash",
+            "name": "hash_32byte",
+            "api": "blake2b"
+          },
+          {
+            "value": 1009,
+            "range": "± 20",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "libcrux keyedhash",
+            "name": "hash_64byte",
+            "api": "blake2b"
+          },
+          {
+            "value": 1000,
+            "range": "± 2",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "libcrux keyedhash",
+            "name": "hash_128byte",
+            "api": "blake2b"
+          },
+          {
+            "value": 3064,
+            "range": "± 83",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "libcrux keyedhash",
+            "name": "hash_1024byte",
+            "api": "blake2b"
+          },
+          {
+            "value": 1532,
+            "range": "± 15",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "rustcrypto keyedhash",
+            "name": "hash_32byte",
+            "api": "shake256"
+          },
+          {
+            "value": 1536,
+            "range": "± 48",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "rustcrypto keyedhash",
+            "name": "hash_64byte",
+            "api": "shake256"
+          },
+          {
+            "value": 2263,
+            "range": "± 5",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "rustcrypto keyedhash",
+            "name": "hash_128byte",
+            "api": "shake256"
+          },
+          {
+            "value": 6626,
+            "range": "± 53",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "rustcrypto keyedhash",
+            "name": "hash_1024byte",
+            "api": "shake256"
+          },
+          {
+            "value": 450,
+            "range": "± 3",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "libcrux aead",
+            "name": "encrypt_32byte",
+            "api": "chacha20poly1305"
+          },
+          {
+            "value": 469,
+            "range": "± 1",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "libcrux aead",
+            "name": "decrypt_32byte",
+            "api": "chacha20poly1305"
+          },
+          {
+            "value": 4406,
+            "range": "± 16",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "libcrux aead",
+            "name": "encrypt_1024byte",
+            "api": "chacha20poly1305"
+          },
+          {
+            "value": 4427,
+            "range": "± 36",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "libcrux aead",
+            "name": "decrypt_1024byte",
+            "api": "chacha20poly1305"
+          },
+          {
+            "value": 1527,
+            "range": "± 10",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "rustcrypto aead",
+            "name": "encrypt_32byte",
+            "api": "chacha20poly1305"
+          },
+          {
+            "value": 1552,
+            "range": "± 4",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "rustcrypto aead",
+            "name": "decrypt_32byte",
+            "api": "chacha20poly1305"
+          },
+          {
+            "value": 2986,
+            "range": "± 4",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "rustcrypto aead",
+            "name": "encrypt_1024byte",
+            "api": "chacha20poly1305"
+          },
+          {
+            "value": 2960,
+            "range": "± 7",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "rustcrypto aead",
+            "name": "decrypt_1024byte",
+            "api": "chacha20poly1305"
+          },
+          {
+            "value": 1919,
+            "range": "± 6",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "rustcrypto aead",
+            "name": "encrypt_32byte",
+            "api": "xchacha20poly1305"
+          },
+          {
+            "value": 1937,
+            "range": "± 4",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "rustcrypto aead",
+            "name": "decrypt_32byte",
+            "api": "xchacha20poly1305"
+          },
+          {
+            "value": 3400,
+            "range": "± 5",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "rustcrypto aead",
+            "name": "encrypt_1024byte",
+            "api": "xchacha20poly1305"
+          },
+          {
+            "value": 3357,
+            "range": "± 4",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "rustcrypto aead",
+            "name": "decrypt_1024byte",
+            "api": "xchacha20poly1305"
+          },
+          {
+            "value": 41235,
+            "range": "± 180",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "libcrux kem",
+            "name": "keygen",
+            "api": "kyber512"
+          },
+          {
+            "value": 48547,
+            "range": "± 797",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "libcrux kem",
+            "name": "encaps",
+            "api": "kyber512"
+          },
+          {
+            "value": 63158,
+            "range": "± 532",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "libcrux kem",
+            "name": "decaps",
+            "api": "kyber512"
+          },
+          {
+            "value": 72623,
+            "range": "± 393",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "oqs kem",
+            "name": "keygen",
+            "api": "kyber512"
+          },
+          {
+            "value": 92565,
+            "range": "± 451",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "oqs kem",
+            "name": "encaps",
+            "api": "kyber512"
+          },
+          {
+            "value": 94334,
+            "range": "± 8436",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "oqs kem",
+            "name": "decaps",
+            "api": "kyber512"
+          },
+          {
+            "value": 825008210,
+            "range": "± 601575370",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "oqs kem",
+            "name": "keygen",
+            "api": "classicmceliece460896"
+          },
+          {
+            "value": 410214,
+            "range": "± 5732",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
+            "category": "oqs kem",
+            "name": "encaps",
+            "api": "classicmceliece460896"
+          },
+          {
+            "value": 87956917,
+            "range": "± 116034",
+            "unit": "ns/iter",
+            "os": "ubuntu-latest_32",
             "category": "oqs kem",
             "name": "decaps",
             "api": "classicmceliece460896"
