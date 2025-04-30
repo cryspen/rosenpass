@@ -72,7 +72,8 @@ jobs:
         uses: cryspen/benchmark-upload-and-plot-action@v2
         with:
           name: rosenpass-ciphers primitives benchmarks
-          group-by: 'os'
+          group-by: 'os,primitive,algorithm'
+          schema: 'os,primitive,algorithm,implementation,operation,length'
           input-data-path: ciphers/bench-processed.json
           benchmark-data-dir-path: dev/bench/ciphers-primitives
           github-token: ${{ secrets.GITHUB_TOKEN }}
