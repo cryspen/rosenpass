@@ -235,11 +235,13 @@ impl AggregateStat<Duration> {
     ) -> std::io::Result<()> {
         writeln!(
             w,
-            r#"{{"name":"{name}", "unit":"ns/iter", "value":"{value}", "range":"± {range}", "category":"{category}", "sampleSize": "{sample_size}"}}"#,
+            r#"{{"name":"{name}", "unit":"ns/iter", "value":"{value}", "range":"± {range}", "category":"{category}", "sampleSize":"{sample_size}", "os":"{os}", "arch":"{arch}"}}"#,
             name = label,
             value = self.mean_duration.as_nanos(),
             range = self.sd_duration.as_nanos(),
             sample_size = self.sample_size,
+            os = std::env::consts::OS,
+            arch = std::env::consts::ARCH,
         )
     }
 }
