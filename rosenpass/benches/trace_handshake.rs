@@ -152,7 +152,7 @@ impl std::fmt::Display for SpanGroup {
             SpanGroup::BelowMicrosec => "below_us",
         };
 
-        write(f, "{txt}")
+        write!(f, "{txt}")
     }
 }
 
