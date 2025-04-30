@@ -1,5 +1,5 @@
 window.BENCHMARK_DATA = {
-  "lastUpdate": 1746017095248,
+  "lastUpdate": 1746019618645,
   "repoUrl": "https://github.com/cryspen/rosenpass",
   "entries": {
     "rosenpass protocol benchmarks": [
@@ -2438,13 +2438,821 @@ window.BENCHMARK_DATA = {
             "sampleSize": "1"
           }
         ]
+      },
+      {
+        "commit": {
+          "author": {
+            "email": "jan@cryspen.com",
+            "name": "Jan Winkelmann (keks)",
+            "username": "keks"
+          },
+          "committer": {
+            "email": "jan@cryspen.com",
+            "name": "Jan Winkelmann (keks)",
+            "username": "keks"
+          },
+          "distinct": true,
+          "id": "cb5423fbc4d9a4af8b097573433385906818d619",
+          "message": "add os and arch info to protocol benchmarks",
+          "timestamp": "2025-04-30T15:24:15+02:00",
+          "tree_id": "7df553269152b740989b3b5444b56f8274e340c2",
+          "url": "https://github.com/cryspen/rosenpass/commit/cb5423fbc4d9a4af8b097573433385906818d619"
+        },
+        "date": 1746019618047,
+        "bigger_is_better": false,
+        "benches": [
+          {
+            "name": "ihi4",
+            "unit": "ns/iter",
+            "value": "9137",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihi5",
+            "unit": "ns/iter",
+            "value": "633064",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihr8",
+            "unit": "ns/iter",
+            "value": "8366",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhr7",
+            "unit": "ns/iter",
+            "value": "8476",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihr4",
+            "unit": "ns/iter",
+            "value": "9888",
+            "range": "± 1142",
+            "category": "proto_run_V02",
+            "sampleSize": "2",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhr4",
+            "unit": "ns/iter",
+            "value": "28594",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihi8",
+            "unit": "ns/iter",
+            "value": "8746",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "icr2",
+            "unit": "ns/iter",
+            "value": "54211",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "handle_resp_conf",
+            "unit": "ns/iter",
+            "value": "524773",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "icr4",
+            "unit": "ns/iter",
+            "value": "8396",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihi1",
+            "unit": "ns/iter",
+            "value": "617416",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhi3",
+            "unit": "ns/iter",
+            "value": "7824",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhi5",
+            "unit": "ns/iter",
+            "value": "647452",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihi2",
+            "unit": "ns/iter",
+            "value": "240",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ici3",
+            "unit": "ns/iter",
+            "value": "7675",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhi6",
+            "unit": "ns/iter",
+            "value": "3877",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhi4",
+            "unit": "ns/iter",
+            "value": "24316",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ici7",
+            "unit": "ns/iter",
+            "value": "6713",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "icr7",
+            "unit": "ns/iter",
+            "value": "6732",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "icr3",
+            "unit": "ns/iter",
+            "value": "8176",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihr5",
+            "unit": "ns/iter",
+            "value": "1156419",
+            "range": "± 507464",
+            "category": "proto_run_V02",
+            "sampleSize": "2",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihr1",
+            "unit": "ns/iter",
+            "value": "1000503",
+            "range": "± 481421",
+            "category": "proto_run_V02",
+            "sampleSize": "2",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihr7",
+            "unit": "ns/iter",
+            "value": "551593",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihi7",
+            "unit": "ns/iter",
+            "value": "603890",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "icr1",
+            "unit": "ns/iter",
+            "value": "1078558",
+            "range": "± 416038",
+            "category": "proto_run_V02",
+            "sampleSize": "2",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhr3",
+            "unit": "ns/iter",
+            "value": "7694",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhr6",
+            "unit": "ns/iter",
+            "value": "1130696",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "icr6",
+            "unit": "ns/iter",
+            "value": "40",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihr6",
+            "unit": "ns/iter",
+            "value": "8355",
+            "range": "± 320",
+            "category": "proto_run_V02",
+            "sampleSize": "2",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhr5",
+            "unit": "ns/iter",
+            "value": "552724",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "handle_initiation",
+            "unit": "ns/iter",
+            "value": "2590097",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "handle_resp_hello",
+            "unit": "ns/iter",
+            "value": "715569",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "handle_init_hello",
+            "unit": "ns/iter",
+            "value": "3321937",
+            "range": "± 156573",
+            "category": "proto_run_V02",
+            "sampleSize": "2",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhr1",
+            "unit": "ns/iter",
+            "value": "311",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhi7",
+            "unit": "ns/iter",
+            "value": "8376",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ici4",
+            "unit": "ns/iter",
+            "value": "8335",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihi6",
+            "unit": "ns/iter",
+            "value": "543577",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "handle_init_conf",
+            "unit": "ns/iter",
+            "value": "1118313",
+            "range": "± 376404",
+            "category": "proto_run_V02",
+            "sampleSize": "2",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihi3",
+            "unit": "ns/iter",
+            "value": "20067",
+            "range": "± 1",
+            "category": "proto_run_V02",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhi5",
+            "unit": "ns/iter",
+            "value": "1599393",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihi2",
+            "unit": "ns/iter",
+            "value": "240",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhr5",
+            "unit": "ns/iter",
+            "value": "1532648",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihi5",
+            "unit": "ns/iter",
+            "value": "1640640",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhi6",
+            "unit": "ns/iter",
+            "value": "4678",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihr7",
+            "unit": "ns/iter",
+            "value": "1514384",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ici3",
+            "unit": "ns/iter",
+            "value": "8496",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihi4",
+            "unit": "ns/iter",
+            "value": "11201",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "handle_init_hello",
+            "unit": "ns/iter",
+            "value": "9299704",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ici4",
+            "unit": "ns/iter",
+            "value": "9057",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihi1",
+            "unit": "ns/iter",
+            "value": "1582602",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhr7",
+            "unit": "ns/iter",
+            "value": "9138",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhi7",
+            "unit": "ns/iter",
+            "value": "9148",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihr5",
+            "unit": "ns/iter",
+            "value": "1676307",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhr1",
+            "unit": "ns/iter",
+            "value": "241",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihi3",
+            "unit": "ns/iter",
+            "value": "13515",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihi7",
+            "unit": "ns/iter",
+            "value": "1497312",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "handle_resp_conf",
+            "unit": "ns/iter",
+            "value": "1491692",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "icr3",
+            "unit": "ns/iter",
+            "value": "8576",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "icr7",
+            "unit": "ns/iter",
+            "value": "7423",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "icr4",
+            "unit": "ns/iter",
+            "value": "9137",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "handle_init_conf",
+            "unit": "ns/iter",
+            "value": "1733003",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhr3",
+            "unit": "ns/iter",
+            "value": "8526",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhr4",
+            "unit": "ns/iter",
+            "value": "38021",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhi4",
+            "unit": "ns/iter",
+            "value": "27992",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "icr6",
+            "unit": "ns/iter",
+            "value": "40",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "icr2",
+            "unit": "ns/iter",
+            "value": "51726",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihi8",
+            "unit": "ns/iter",
+            "value": "9147",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhi3",
+            "unit": "ns/iter",
+            "value": "8636",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "handle_initiation",
+            "unit": "ns/iter",
+            "value": "6357177",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ici7",
+            "unit": "ns/iter",
+            "value": "7313",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "handle_resp_hello",
+            "unit": "ns/iter",
+            "value": "1675465",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihi6",
+            "unit": "ns/iter",
+            "value": "1486783",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihr1",
+            "unit": "ns/iter",
+            "value": "1480731",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihr6",
+            "unit": "ns/iter",
+            "value": "9989",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihr4",
+            "unit": "ns/iter",
+            "value": "10931",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "rhr6",
+            "unit": "ns/iter",
+            "value": "3008740",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "icr1",
+            "unit": "ns/iter",
+            "value": "1654256",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          },
+          {
+            "name": "ihr8",
+            "unit": "ns/iter",
+            "value": "9177",
+            "range": "± 1",
+            "category": "proto_run_V03",
+            "sampleSize": "1",
+            "os": "linux",
+            "arch": "x86_64"
+          }
+        ]
       }
     ]
   },
   "groupBy": [
+    "os",
+    "arch",
     "category"
   ],
   "schema": [
+    "os",
+    "arch",
     "name",
     "category"
   ]
