@@ -2,7 +2,7 @@ name: rosenpass - protocol - benchmark
 
 on:
   pull_request:
-  workflow_dispatch:
+  push:
 
 env:
   CARGO_TERM_COLOR: always
