@@ -66,7 +66,8 @@ jobs:
       # Benchmarks ...
 
       - name: 🏃🏻‍♀️ Benchmarks (using Nix as shell)
-        run: nix develop ".#devShells.${{ matrix.system }}.benchmark" --command cargo bench -p ciphers -F bench --bench primitives --verbose $RUST_TARGET_FLAG -- --output-format bencher | tee bench-primitives.txt
+        working-directory: ciphers
+        run: nix develop ".#devShells.${{ matrix.system }}.benchmark" --command cargo bench -F bench --bench primitives --verbose $RUST_TARGET_FLAG -- --output-format bencher | tee ../bench-primitives.txt
 
       - name: Extract benchmarks
         uses: cryspen/benchmark-data-extract-transform@v2
