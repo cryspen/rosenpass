@@ -2,7 +2,6 @@ name: rosenpass-ciphers - primitives - benchmark
 
 on:
   pull_request:
-    branches: ["main", "dev"]
   workflow_dispatch:
 
 env:
@@ -46,9 +45,23 @@ jobs:
         run: echo "RUST_TARGET_FLAG=--target=i686-unknown-linux-gnu"    > $GITHUB_ENV
         if: ${{ matrix.system == 'i686-linux' }}
 
-      - name: 🛠️ Config Linux aarch64
-        run: echo "RUST_TARGET_FLAG=--target=aarch64-unknown-linux-gnu" > $GITHUB_ENV
-        if: ${{ matrix.system == 'aarch64-linux' }}
+      - name: 🛠️ Prepare Benchmark Path
+        env:
+          EVENT_NAME:  ${{ github.event_name }}
+          BRANCH_NAME: ${{ github.ref_name   }}
+          PR_NUMBER:   ${{ github.event.pull_request.number }}
+        run: |
+          case "$EVENT_NAME" in
+          "push")
+            echo "BENCH_PATH=branch/$BRANCH_NAME" >> $GITHUB_ENV
+            ;;
+          "pull_request")
+            echo "BENCH_PATH=pull/$PR_NUMBER" >> $GITHUB_ENV
+            ;;
+          *)
+            echo "don't know benchmark path for event of type $EVENT_NAME, aborting"
+            exit 1
+          esac
 
       # Benchmarks ...
 
@@ -71,10 +84,11 @@ jobs:
           group-by: "os,primitive,algorithm"
           schema: "os,primitive,algorithm,implementation,operation,length"
           input-data-path: bench-primitives.json
-          benchmark-data-dir-path: dev/bench/ciphers-primitives
+          benchmark-data-dir-path: ${{ env.BENCH_PATH }}/primitives
           github-token: ${{ secrets.GITHUB_TOKEN }}
           # NOTE: pushes to current repository
           gh-repository: github.com/${{ github.repository }}
+          gh-pages-branch: benchmarks
           auto-push: true
 
   ciphers-primitives-bench-status:
