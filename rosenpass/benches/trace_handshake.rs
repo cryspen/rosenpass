@@ -13,10 +13,10 @@ use libcrux_test_utils::tracing::{EventType, Trace as _};
 use rosenpass::protocol::{
     CryptoServer, HandleMsgResult, MsgBuf, PeerPtr, ProtocolVersion, SPk, SSk, SymKey,
 };
-use rosenpass_util::trace_bench::{ RpEventType, TRACE};
 use rosenpass_cipher_traits::primitives::Kem;
 use rosenpass_ciphers::StaticKem;
 use rosenpass_secret_memory::secret_policy_try_use_memfd_secrets;
+use rosenpass_util::trace_bench::{RpEventType, TRACE};
 
 const ITERATIONS: usize = 100;
 
@@ -109,8 +109,8 @@ fn main() {
     write_json_arrays(
         &mut std::io::stdout(), // Write to standard output
         vec![
-            ("proto_run_V02", statistical_analysis(trace_v02.to_vec())),
-            ("proto_run_V03", statistical_analysis(trace_v03.to_vec())),
+            ("V02", statistical_analysis(trace_v02.to_vec())),
+            ("V03", statistical_analysis(trace_v03.to_vec())),
         ],
     )
     .expect("error writing json data");
@@ -127,14 +127,14 @@ fn statistical_analysis(trace: Vec<RpEventType>) -> Vec<(&'static str, Aggregate
         .collect()
 }
 
-/// Takes an iterator of ("category", iterator_of_stats) pairs and writes them
+/// Takes an iterator of ("protocol_version", iterator_of_stats) pairs and writes them
 /// as a single flat JSON array to the provided writer.
 ///
 /// # Arguments
 /// * `w` - The writer to output JSON to (e.g., stdout, file).
 /// * `item_groups` - An iterator producing tuples of (`&'static str`, `II`), where
 ///   `II` is itself an iterator producing (`&'static str`, `AggregateStat<Duration>`).
-///   Represents the category name and the statistics items within that category.
+///   Represents the protocol_version name and the statistics items within that protocol_version.
 ///
 /// # Type Parameters
 /// * `W` - A type that implements `std::io::Write`.
@@ -143,11 +143,11 @@ fn write_json_arrays<W: Write, II: IntoIterator<Item = (&'static str, AggregateS
     w: &mut W,
     item_groups: impl IntoIterator<Item = (&'static str, II)>,
 ) -> io::Result<()> {
-    // Flatten the groups into a single iterator of (category, label, stats)
-    let iter = item_groups.into_iter().flat_map(|(cat, items)| {
+    // Flatten the groups into a single iterator of (protocol_version, label, stats)
+    let iter = item_groups.into_iter().flat_map(|(version, items)| {
         items
             .into_iter()
-            .map(move |(label, agg_stat)| (cat, label, agg_stat))
+            .map(move |(label, agg_stat)| (version, label, agg_stat))
     });
     let mut delim = ""; // Start with no delimiter
 
@@ -155,9 +155,9 @@ fn write_json_arrays<W: Write, II: IntoIterator<Item = (&'static str, AggregateS
     write!(w, "[")?;
 
     // Write the flattened statistics as JSON objects, separated by commas.
-    for (cat, label, agg_stat) in iter {
+    for (version, label, agg_stat) in iter {
         write!(w, "{delim}")?; // Write delimiter (empty for first item, "," for subsequent)
-        agg_stat.write_json_ns(label, cat, w)?; // Write the JSON object for the stat entry
+        agg_stat.write_json_ns(label, version, w)?; // Write the JSON object for the stat entry
         delim = ","; // Set delimiter for the next iteration
     }
 
@@ -166,7 +166,7 @@ fn write_json_arrays<W: Write, II: IntoIterator<Item = (&'static str, AggregateS
 }
 
 /// Used to group benchmark results in visualizations
-enum SpanGroup {
+enum RunTimeGroup {
     /// For particularly long operations.
     Long,
     /// Operations of moderate duration.
@@ -177,14 +177,14 @@ enum SpanGroup {
     BelowMicrosec,
 }
 
-/// Used when writing the group information to JSON output.
-impl std::fmt::Display for SpanGroup {
+impl std::fmt::Display for RunTimjjjjjkkkjjjkkakeGroup {
+    /// Used when writing the group information to JSON output.
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let txt = match self {
-            SpanGroup::Long => "long",
-            SpanGroup::Medium => "medium",
-            SpanGroup::BelowMillisec => "below_ms",
-            SpanGroup::BelowMicrosec => "below_us",
+            RunTimeGroup::Long => "long",
+            RunTimeGroup::Medium => "medium",
+            RunTimeGroup::BelowMillisec => "below_ms",
+            RunTimeGroup::BelowMicrosec => "below_us",
         };
         write!(f, "{txt}")
     }
@@ -192,16 +192,16 @@ impl std::fmt::Display for SpanGroup {
 
 /// Maps specific internal timing labels (likely from rosenpass internals)
 /// to the broader SpanGroup categories.
-fn span_group(label: &str) -> SpanGroup {
+fn run_time_group(label: &str) -> RunTimeGroup {
     match label {
         // Explicitly categorized labels based on expected performance characteristics
-        "handle_init_hello" | "handle_resp_hello" | "rhi5" | "ihr5" => SpanGroup::Long,
-        "rhr1" | "ihi2" | "icr6" => SpanGroup::BelowMicrosec,
-        "rhi6" | "ici7" | "icr7" | "rhr3" | "icr3" | "ihr8" | "ici4" | "rhi3" | "rhi4" | "rhr4"
-        | "rhr7" | "ici3" | "ihi3" | "ihi8" | "icr2" | "icr4" | "ihr4" | "ihr6" | "ihi4"
-        | "rhi7" => SpanGroup::BelowMillisec,
-        // Default category for any other labels
-        _ => SpanGroup::Medium,
+        "handle_init_hello" | "handle_resp_hello" | "RHI5" | "IHR5" => RunTimeGroup::Long,
+        "RHR1" | "IHI2" | "ICR6" => RunTimeGroup::BelowMicrosec,
+        "RHI6" | "ICI7" | "ICR7" | "RHR3" | "ICR3" | "IHR8" | "ICI4" | "RHI3" | "RHI4" | "RHR4"
+        | "RHR7" | "ICI3" | "IHI3" | "IHI8" | "ICR2" | "ICR4" | "IHR4" | "IHR6" | "IHI4"
+        | "RHI7" => RunTimeGroup::BelowMillisec,
+        // Default protocol_version for any other labels
+        _ => RunTimeGroup::Medium,
     }
 }
 
@@ -342,25 +342,30 @@ impl AggregateStat<Duration> {
     }
 
     /// Writes the statistics as a JSON object to the provided writer.
-    /// Includes metadata like label, category, OS, architecture, and span group.
+    /// Includes metadata like label, protocol_version, OS, architecture, and run time group.
     ///
     /// # Arguments
     /// * `label` - The specific benchmark/span label.
-    /// * `category` - Broader category (e.g., "proto_run_V02").
+    /// * `protocol_version` - Version of the protocol that is benchmarked.
     /// * `w` - The output writer (must implement `std::io::Write`).
-    fn write_json_ns(&self, label: &str, category: &str, w: &mut impl io::Write) -> io::Result<()> {
+    fn write_json_ns(
+        &self,
+        label: &str,
+        protocol_version: &str,
+        w: &mut impl io::Write,
+    ) -> io::Result<()> {
         // Format the JSON string using measured values and environment constants
         writeln!(
             w,
-            r#"{{"name":"{name}", "unit":"ns/iter", "value":"{value}", "range":"± {range}", "category":"{category}", "sampleSize":"{sample_size}", "os":"{os}", "arch":"{arch}", "group":"{group}"}}"#,
+            r#"{{"name":"{name}", "unit":"ns/iter", "value":"{value}", "range":"± {range}", "protocol version":"{protocol_version}", "sample size":"{sample_size}", "os":"{os}", "arch":"{arch}", "run time":"{run_time}"}}"#,
             name = label,                          // Benchmark name
             value = self.mean_duration.as_nanos(), // Mean duration in nanoseconds
             range = self.sd_duration.as_nanos(),   // Standard deviation in nanoseconds
             sample_size = self.sample_size,        // Number of samples
             os = std::env::consts::OS,             // Operating system
             arch = std::env::consts::ARCH,         // CPU architecture
-            group = span_group(label),             // Span group category (long, medium, etc.)
-            category = category                    // Overall category (e.g., protocol version)
+            run_time = run_time_group(label),      // Run time group category (long, medium, etc.)
+            protocol_version = protocol_version // Overall protocol_version (e.g., protocol version)
         )
     }
 }
