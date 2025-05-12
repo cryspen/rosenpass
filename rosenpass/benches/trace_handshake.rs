@@ -177,7 +177,7 @@ enum RunTimeGroup {
     BelowMicrosec,
 }
 
-impl std::fmt::Display for RunTimjjjjjkkkjjjkkakeGroup {
+impl std::fmt::Display for RunTimeGroup {
     /// Used when writing the group information to JSON output.
     fn fmt(&self, f: &mut std::fmt::Formatter<'_>) -> std::fmt::Result {
         let txt = match self {
