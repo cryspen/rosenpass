@@ -69,13 +69,12 @@ jobs:
         run: nix develop ".#devShells.${{ matrix.system }}.benchmark" --command cargo bench -p rosenpass --bench trace_handshake -F trace_bench --verbose $RUST_TARGET_FLAG >bench-protocol.json
 
       - name: Upload benchmarks
-        uses: cryspen/benchmark-upload-and-plot-action@v2
+        uses: cryspen/benchmark-upload-and-plot-action@v3
         with:
-          name: rosenpass protocol benchmarks
+          name: Protocol Benchmarks
           group-by: "os,arch,protocol version,run time"
           schema: "os,arch,protocol version,run time,name"
           input-data-path: bench-protocol.json
-          benchmark-data-dir-path: ${{ env.BENCH_PATH }}/protocol
           github-token: ${{ secrets.GITHUB_TOKEN }}
           # NOTE: pushes to current repository
           gh-repository: github.com/${{ github.repository }}

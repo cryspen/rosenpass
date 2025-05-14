@@ -79,13 +79,12 @@ jobs:
           data-out-path: bench-primitives.json
 
       - name: Upload benchmarks
-        uses: cryspen/benchmark-upload-and-plot-action@v2
+        uses: cryspen/benchmark-upload-and-plot-action@v3
         with:
-          name: rosenpass-ciphers primitives benchmarks
+          name: Crypto Primitives Benchmarks
           group-by: "os,primitive,algorithm"
           schema: "os,primitive,algorithm,implementation,operation,length"
           input-data-path: bench-primitives.json
-          benchmark-data-dir-path: ${{ env.BENCH_PATH }}/primitives
           github-token: ${{ secrets.GITHUB_TOKEN }}
           # NOTE: pushes to current repository
           gh-repository: github.com/${{ github.repository }}
