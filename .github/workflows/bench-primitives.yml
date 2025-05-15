@@ -90,6 +90,7 @@ jobs:
           gh-repository: github.com/${{ github.repository }}
           gh-pages-branch: benchmarks
           auto-push: true
+          fail-on-alert: true
 
   ciphers-primitives-bench-status:
     if: ${{ always() }}

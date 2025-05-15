@@ -80,6 +80,7 @@ jobs:
           gh-repository: github.com/${{ github.repository }}
           gh-pages-branch: benchmarks
           auto-push: true
+          fail-on-alert: true
 
   ciphers-protocol-bench-status:
     if: ${{ always() }}
