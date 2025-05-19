@@ -1,7 +1,8 @@
 {
   "refs": [
     "refs/heads/benchmark-citest",
-    "refs/heads/wysiwys/benchmark-citest"
+    "refs/heads/wysiwys/benchmark-citest",
+    "refs/heads/keks/benchmarks"
   ],
   "prs": [
     4
