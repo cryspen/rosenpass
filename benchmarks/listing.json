@@ -1,6 +1,7 @@
 {
   "refs": [
-    "refs/heads/keks/benchmarks"
+    "refs/heads/keks/benchmarks",
+    "refs/heads/keks/bench-serde"
   ],
   "prs": []
 }
